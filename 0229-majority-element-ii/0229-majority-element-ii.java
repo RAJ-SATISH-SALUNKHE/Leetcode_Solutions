@@ -11,6 +11,7 @@ class Solution {
         {
             map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
             if(map.get(nums[i]) > threshold && !result.contains(nums[i]))result.add(nums[i]);
+            if(result.size() == 2)break;
         }
 
         return result;
